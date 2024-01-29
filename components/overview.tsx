@@ -14,7 +14,7 @@ export const Overview:React.FC<OverviewProps> = ({data})=>{
                         fontSize={12}
                         tickLine={false}
                         axisLine={false}/>
-                <YAxis tickFormatter={(value)=>`₹${value}`}
+                <YAxis tickFormatter={(value)=>`$${value}`}
                         stroke="#888888"
                         fontSize={12}
                         tickLine={false}
