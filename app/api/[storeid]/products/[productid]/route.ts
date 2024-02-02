@@ -24,7 +24,12 @@ export async function GET(
             images:true,
             category:true,
             size:true,
-            color:true
+            color:true,
+            reviewS:{
+                orderBy:{
+                    createdTime:'desc'
+                }
+            }
         }
     })
     return NextResponse.json(product);

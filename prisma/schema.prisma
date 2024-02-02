@@ -95,6 +95,7 @@ model Product{
   colorid String
   color Color @relation(fields: [colorid], references: [id])
   images Image[]
+  reviewS Review[]
   orderItems OrderItem[]
   createdTime DateTime @default(now())
   updatedTime DateTime @updatedAt
@@ -138,4 +139,15 @@ model OrderItem{
   product Product @relation(fields: [productid], references: [id])
   @@index([orderid])
   @@index([productid])
+}
+
+model Review{
+  id String @id @default(uuid())
+  name String
+  description String
+  productid String
+  product Product @relation(fields: [productid], references: [id])
+  @@index([productid])
+  createdTime DateTime @default(now())
+  updatedTime DateTime @updatedAt
 }

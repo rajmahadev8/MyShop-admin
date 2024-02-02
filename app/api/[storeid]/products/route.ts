@@ -112,7 +112,8 @@ export async function GET(req:Request,
                 images:true,
                 category:true,
                 color:true,
-                size:true
+                size:true,
+                reviewS:true
             },
             orderBy:{
                 createdTime:'desc'
